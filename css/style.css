@@ -1,5 +1,6 @@
 /*--------------Web site--------------*/
 body {
+	margin: 0;
 	background-color: black;
 }
 /*----------------Logo----------------*/
@@ -46,6 +47,23 @@ body {
 	transform: rotateY(0);
 	transition: transform 1s ease,opacity 1.2s ease;
 }
+
+@media (max-width: 630px) {
+    .logo-wrapper {
+    	height: 240px;
+        width: 240px;
+    }
+}
+
+@media (max-width: 630px) {
+    .logo-wrapper .logo {
+        height: 240px;
+        width: 240px;
+        background-size: 240px 240px;
+    }
+}
+
+
 /*--------------UserName--------------*/
 /*----------------Enter---------------*/
 /*-----------Extra-Language-----------*/
