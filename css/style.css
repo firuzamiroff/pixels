@@ -24,12 +24,12 @@ body {
 .logo-wrapper .logo.front {
 	opacity: 1;
 	transform: rotateY(0);
-	transition: opacity 1.2s ease;
+	transition: opacity .5s ease;
     transition: transform 1s ease;
 }
 .logo-wrapper .logo.back {
 	transform: rotateY(180deg);
-	transition: opacity 1.2s ease;
+	transition: opacity .5s ease;
     transition: transform 1s ease;
 
 }
