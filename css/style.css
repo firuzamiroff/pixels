@@ -1,69 +1,67 @@
 /*--------------Web site--------------*/
 body {
 	margin: 0;
+	color: white;
 	background-color: black;
 }
 /*----------------Logo----------------*/
 .logo-wrapper {
 	width: 400px;
     height: 400px;
-    margin: 50px auto;
-	position: relative;
+    position: relative;
+	margin: 50px auto;
 	perspective: 500px;
+	backface-visibility: hidden;
 	transform-style: preserve-3d;
+
 }
 
 .logo-wrapper .logo {
 	width: 400px;
-	height: 400px;
 	position: absolute;
-	backface-visibility: hidden;
-	background-size: 400px 400px;
-	background-repeat: no-repeat;
 }
 
 .logo-wrapper .logo.front {
 	opacity: 1;
 	transform: rotateY(0);
-	transition: transform 1s ease,opacity 1.2s ease;
-	background-image: url(../images/Logo-front.svg);
+	transition: opacity 1.2s ease;
+    transition: transform 1s ease;
 }
-
 .logo-wrapper .logo.back {
-	opacity: 0;
 	transform: rotateY(180deg);
-	transition: transform 1s ease,opacity .5s ease;
-	background-image: url(../images/Logo-back.svg);
+	transition: opacity .5s ease;
+    transition: transform 1s ease;
+
 }
 
 .logo-wrapper.on .logo.front {
-	opacity: 0;
 	transform: rotateY(-180deg);
-	transition: transform 1s ease,opacity .5s ease;
+	transition: opacity .5s ease;
+    transition: transform 1s ease;
 }
-
 .logo-wrapper.on .logo.back {
 	opacity: 1;
 	transform: rotateY(0);
-	transition: transform 1s ease,opacity 1.2s ease;
+	transition: opacity 1.2s ease;
+    transition: transform 1s ease;
 }
 
 @media (max-width: 630px) {
     .logo-wrapper {
-    	height: 240px;
-        width: 240px;
+    	width: 240px;
     }
 }
 
 @media (max-width: 630px) {
     .logo-wrapper .logo {
+    	width: 240px;
         height: 240px;
-        width: 240px;
-        background-size: 240px 240px;
     }
 }
+/*----------------TEST---------------*/
 
 
+/*----------------TEST---------------*/
 /*--------------UserName--------------*/
 /*----------------Enter---------------*/
 /*-----------Extra-Language-----------*/
