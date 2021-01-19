@@ -1,2 +1,53 @@
 /*--------------Web site--------------*/
+body {
+	background-color: black;
+}
 /*----------------Logo----------------*/
+.logo-wrapper {
+	width: 400px;
+    height: 400px;
+    margin: 50px auto;
+	position: relative;
+	perspective: 500px;
+	transform-style: preserve-3d;
+}
+
+.logo-wrapper .logo {
+	width: 400px;
+	height: 400px;
+	position: absolute;
+	backface-visibility: hidden;
+	background-size: 400px 400px;
+	background-repeat: no-repeat;
+}
+
+.logo-wrapper .logo.front {
+	opacity: 1;
+	transform: rotateY(0);
+	transition: transform 1s ease,opacity 1.2s ease;
+	background-image: url(../images/Logo-front.svg);
+}
+
+.logo-wrapper .logo.back {
+	opacity: 0;
+	transform: rotateY(180deg);
+	transition: transform 1s ease,opacity .5s ease;
+	background-image: url(../images/Logo-back.svg);
+}
+
+.logo-wrapper.on .logo.front {
+	opacity: 0;
+	transform: rotateY(-180deg);
+	transition: transform 1s ease,opacity .5s ease;
+}
+
+.logo-wrapper.on .logo.back {
+	opacity: 1;
+	transform: rotateY(0);
+	transition: transform 1s ease,opacity 1.2s ease;
+}
+/*--------------UserName--------------*/
+/*----------------Enter---------------*/
+/*-----------Extra-Language-----------*/
+/*-------------Extra-Icons------------*/
+/*------------Extra-Avatars-----------*/
