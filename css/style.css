@@ -13,7 +13,6 @@ body {
 	perspective: 500px;
 	backface-visibility: hidden;
 	transform-style: preserve-3d;
-
 }
 
 .logo-wrapper .logo {
@@ -43,21 +42,26 @@ body {
 @media (max-width: 630px) {
     .logo-wrapper {
     	width: 240px;
+    	height: 240px;
     }
 }
 
 @media (max-width: 630px) {
     .logo-wrapper .logo {
     	width: 240px;
-        height: 240px;
     }
 }
-/*----------------TEST---------------*/
-
-
-/*----------------TEST---------------*/
 /*--------------UserName--------------*/
 /*----------------Enter---------------*/
 /*-----------Extra-Language-----------*/
-/*-------------Extra-Icons------------*/
+/*--------------Extra-Lang------------*/
 /*------------Extra-Avatars-----------*/
+.avatar-wrapper {
+	text-align: center;
+}
+
+.arrow, .avatar {
+	width: 80px;
+	height: 80px;
+}
+/*------------------------------------*/
