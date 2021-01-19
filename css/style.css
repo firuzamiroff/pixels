@@ -24,13 +24,11 @@ body {
 .logo-wrapper .logo.front {
 	opacity: 1;
 	transform: rotateY(0);
-	transition: opacity .5s ease;
-    transition: transform 1s ease;
+	transition: transform 1s ease,opacity .5s ease;
 }
 .logo-wrapper .logo.back {
 	transform: rotateY(180deg);
-	transition: opacity .5s ease;
-    transition: transform 1s ease;
+	transition: transform 1s ease,opacity .5s ease;
 
 }
 
