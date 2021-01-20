@@ -141,8 +141,9 @@ body {
 /*--------------Settings--------------*/
 .settings {
 	text-align: center;
-	animation: cssAnimation 0s 2s forwards;
 	visibility: hidden;
+	animation: cssAnimation 0s 2s forwards;
+	
 }
 
 @keyframes cssAnimation {
