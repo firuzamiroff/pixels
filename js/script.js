@@ -18,8 +18,6 @@ function myFunction() {
 	$(".settings").css("display", "block");
 }
 
-
-
 $(".left").click(function() {
 	console.log("left")
 	avatar--;
