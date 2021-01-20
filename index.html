@@ -12,19 +12,32 @@
 		<img class="logo back" src="img/Logo-back.svg">
 	</div>
 	<!--<form action="lounge/index.html">-->
-		<label>USERNAME:</label>
-		<input type="text"  name="name" autocomplete="on">
-		<br>
-		<input type="submit" name="" value="ENTER" id="">
+
+		<div class="login-name">
+			<label>USERNAME:</label>
+			<input type="text" class="login-input" name="name" autocomplete="on" onclick="myFunction()">
+		</div>
+		<div class="login-button">
+			<input type="submit" name="" value="ENTER">
+		</div>
 	<!--</form>-->
-	<div class="avatar-wrapper">
-		<img class="arrow up" src="img/action-arrow-up.svg">
-		<br>
-		<img class="arrow left" src="img/action-arrow-left.svg">
-		<img class="avatar" src="img/avatar1.svg">
-		<img class="arrow right" src="img/action-arrow-right.svg">
-		<br>
-		<img class="arrow down" src="img/action-arrow-down.svg">
+	<div class="settings" style="display: none;">
+		<div class="lang-wrapper">
+			<select id="lang-select" name="language">
+				<option value="en" selected="">English</option>
+				<option value="ru">Русский</option>
+				<option value="tr">Türkçe</option>
+			</select>
+		</div>
+		<div class="avatar-wrapper" >
+			<img class="arrow up" style="transform: rotate(90deg);" src="img/arrow.svg">
+			<br>
+			<img class="arrow left" src="img/arrow.svg">
+			<img class="avatar" src="img/avatar1.svg">
+			<img class="arrow right" style="transform: rotate(180deg);" src="img/arrow.svg">
+			<br>
+			<img class="arrow down" style="transform: rotate(-90deg);" src="img/arrow.svg">
+		</div>
 	</div>
 	<script src="js/jquery.min.js"></script>
 	<script src="js/script.js"></script>

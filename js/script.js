@@ -14,6 +14,12 @@ function randomNumber(min, max){
     return Math.floor(r)
 }
 
+function myFunction() {
+	$(".settings").css("display", "block");
+}
+
+
+
 $(".left").click(function() {
 	console.log("left")
 	avatar--;
@@ -24,6 +30,7 @@ $(".left").click(function() {
 		$(".avatar").attr("src", "img/avatar"+avatars[avatar]+".svg");
 	}
 });
+
 $(".right").click(function() {
 	console.log("right")
 	avatar++;
@@ -34,6 +41,7 @@ $(".right").click(function() {
 		$(".avatar").attr("src", "img/avatar"+avatars[avatar]+".svg");
 	}
 });
+
 $(".up").click(function() {
 	console.log("up")
 	avatarcolor--;
@@ -49,6 +57,7 @@ $(".up").click(function() {
 		$( ".avatar" ).css("box-shadow", " 0 0 0 5px " + avatarcolors[avatarcolor]);
 	}
 });
+
 $(".down").click(function() {
 	console.log("down")
 	avatarcolor++;

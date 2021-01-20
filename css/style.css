@@ -3,11 +3,18 @@ body {
 	margin: 0;
 	color: white;
 	background-color: black;
+	font-family: "Helvetica Neue",Helvetica,
+    "Hiragino Sans GB",STHeiti,"Microsoft Yahei",
+    "WenQuanYi Micro Hei",Arial,Verdana,sans-serif;
+
 }
+
+
 /*----------------Logo----------------*/
 .logo-wrapper {
 	width: 400px;
     height: 400px;
+    text-align: none;
     position: relative;
 	margin: 50px auto;
 	perspective: 500px;
@@ -28,7 +35,6 @@ body {
 .logo-wrapper .logo.back {
 	transform: rotateY(180deg);
 	transition: transform 1s ease,opacity .5s ease;
-
 }
 
 .logo-wrapper.on .logo.front {
@@ -52,18 +58,28 @@ body {
     }
 }
 /*--------------UserName--------------*/
-/*----------------Enter---------------*/
-/*-----------Extra-Language-----------*/
-/*--------------Extra-Lang------------*/
-/*------------Extra-Avatars-----------*/
-.avatar-wrapper {
+.login-name {
 	text-align: center;
 }
-
+/*----------------Enter---------------*/
+.login-button {
+	text-align: center;
+}
+/*--------------Settings--------------*/
+.settings {
+	text-align: center;
+}
+/*--------------Language--------------*/
+/*---------------Avatars--------------*/
 .arrow, .avatar {
 	width: 80px;
 	height: 80px;
 }
 
-
+@media (max-width: 630px) {
+    .arrow, .avatar {
+    	width: 60px;
+		height: 60px;
+    }
+}
 /*------------------------------------*/
