@@ -141,6 +141,12 @@ body {
 /*--------------Settings--------------*/
 .settings {
 	text-align: center;
+	animation: cssAnimation 0s 2s forwards;
+	visibility: hidden;
+}
+
+@keyframes cssAnimation {
+  to   { visibility: visible; }
 }
 /*--------------Language--------------*/
 /*---------------Avatars--------------*/
