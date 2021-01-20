@@ -14,6 +14,7 @@ function randomNumber(min, max){
     return Math.floor(r)
 }
 
+
 function myFunction() {
 	$(".settings").css("display", "block");
 }
