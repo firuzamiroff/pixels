@@ -14,11 +14,6 @@ function randomNumber(min, max){
     return Math.floor(r)
 }
 
-
-function myFunction() {
-	$(".settings").css("display", "block");
-}
-
 $(".left").click(function() {
 	console.log("left")
 	avatar--;
