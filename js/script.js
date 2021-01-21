@@ -2,9 +2,8 @@ var avatars = ["1", "2", "3", "4", "5", "6", "7", "8", "9"];
 var avatarcolors = ["black", "#ab1d19", "#7ec5f9", "#cf629b", "#59a259", "#9334ad", "#fda500", "#797130"];
 var avatar = randomNumber(0, avatars.length);
 var avatarcolor = randomNumber(0, avatarcolors.length);
-var user = {
-	name: "",
-	lang: "",
+var data = {
+	username: "",
 	avatar: "",
 	avatarcolor: ""
 };
@@ -79,3 +78,64 @@ $(document).ready(function() {
 	}
 });
 
+var n = $("#form-name")//, o = $("#lang-select")
+
+$(".enter-button").click(function() {
+	localStorage.setItem('username', JSON.stringify(n.val()))
+	console.log(n.val());
+	document.location.href = "lounge/index.html"
+    //Settings.prop("username", n.val())//,
+    //Settings.prop("language", o.val())
+});
+
+
+
+//var arrayPersonData = JSON.parse(localStorage.getItem('username'))
+
+//arrayOfUserNames.push('bar')
+
+//localStorage.setItem('arrayOfUserNames', JSON.stringify(arrayOfUserNames))
+
+//arrayOfUserNames = JSON.parse(localStorage.getItem('arrayOfUserNames'))
+
+
+
+//----
+//Saving the username from input field to the Local Storage
+//top.username=document.getElementById("name").value;
+//localStorage.setItem('user', top.username);
+
+//Getting out the username from the Local Storage
+//document.getElementById('list').innerHTML =localStorage.getItem('user');
+//----
+//localStorage.setItem('arrayOfUserNames', JSON.stringify(['foo']))
+
+//var arrayOfUserNames = JSON.parse(localStorage.getItem('arrayOfUserNames'))
+
+//arrayOfUserNames.push('bar')
+
+//localStorage.setItem('arrayOfUserNames', JSON.stringify(arrayOfUserNames))
+
+//arrayOfUserNames = JSON.parse(localStorage.getItem('arrayOfUserNames'))
+
+//console.log(arrayOfUserNames) 
+//---
+// General syntax for storing data
+//localStorage.setItem('key', 'value');
+// Also note that both the key & the value has to be strings. So we stringify the value(if it's an object) before setting it.
+
+// So, if you have an object as a value that you want to save, stringify it like this
+//localStorage.setItem('some-key', JSON.stringify(itemData));
+
+// OR for individual key-value pairs
+//localStorage.setItem('some-key', JSON.stringify({ token: token, name: name }));
+
+// To retrieve data from localstorage
+//const myData = JSON.parse(localStorage.getItem('some-key'));
+
+// To remove a value/item from localStorage
+//localStorage.removeItem("some-key");
+
+
+// see a note at the end of this answer for tips about 
+// using an angular package for a cleaner & smoother storage usage.
