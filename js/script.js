@@ -78,27 +78,14 @@ $(document).ready(function() {
 	}
 });
 
-var n = $("#form-name")//, o = $("#lang-select")
+//var n = $("#form-name")//, o = $("#lang-select")
 
 $(".enter-button").click(function() {
-	localStorage.setItem('username', JSON.stringify(n.val()))
-	console.log(n.val());
-	document.location.href = "lounge/index.html"
-    //Settings.prop("username", n.val())//,
-    //Settings.prop("language", o.val())
+	localStorage.setItem('username', JSON.stringify($("#form-name").val()));
+	localStorage.setItem('avatar', JSON.stringify(avatars[avatar]));
+	localStorage.setItem('avatarcolor', JSON.stringify(avatarcolors[avatarcolor]));
+	document.location.href = "lounge/index.html";
 });
-
-
-
-//var arrayPersonData = JSON.parse(localStorage.getItem('username'))
-
-//arrayOfUserNames.push('bar')
-
-//localStorage.setItem('arrayOfUserNames', JSON.stringify(arrayOfUserNames))
-
-//arrayOfUserNames = JSON.parse(localStorage.getItem('arrayOfUserNames'))
-
-
 
 //----
 //Saving the username from input field to the Local Storage

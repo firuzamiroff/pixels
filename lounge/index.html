@@ -5,12 +5,21 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Lounge</title>
 </head>
-<body>
-	<h1>Hello</h1>
-	<h2 id="lololo"></h2>
+<body bgcolor="black" style="text-align: center;">
+
+	<h1 style="color: white;">Hello</h1>
+	<h1 id="lololo" style="color: white;"></h1>
+	<div>
+		<img width="80" height="80" id=avatar src="../img/avatar1.svg" alt="" style="background-color: none; ">
+	</div>
 	<script type="text/javascript">
 		var arrayPersonData = JSON.parse(localStorage.getItem('username'))
+		var arrayPersonData1 = JSON.parse(localStorage.getItem('avatar'))
+		var arrayPersonData2 = JSON.parse(localStorage.getItem('avatarcolor'))
 		document.getElementById('lololo').innerHTML = arrayPersonData;
+		document.getElementById("avatar").src = "../img/avatar"+ arrayPersonData1 +".svg";
+		document.getElementById("avatar").style = "background-color: "+ arrayPersonData2 +";";
+
 	</script>
 </body>
 </html>
