@@ -9,7 +9,8 @@
 	<h1>Hello</h1>
 	<h2 id="lololo"></h2>
 	<script type="text/javascript">
-		document.getElementById('lololo').innerHTML =localStorage.getItem('username');
+		var arrayPersonData = JSON.parse(localStorage.getItem('username'))
+		document.getElementById('lololo').innerHTML = arrayPersonData;
 	</script>
 </body>
 </html>
