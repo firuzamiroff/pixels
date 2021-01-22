@@ -1,111 +1,65 @@
 var avatars = ["1", "2", "3", "4", "5", "6", "7", "8", "9"];
 var avatarcolors = ["black", "#ab1d19", "#7ec5f9", "#cf629b", "#59a259", "#9334ad", "#fda500", "#797130"];
+var avatarborders = ["#333", "#ab1d19", "#7ec5f9", "#cf629b", "#59a259", "#9334ad", "#fda500", "#797130"];
 var avatar = randomNumber(0, avatars.length);
 var avatarcolor = randomNumber(0, avatarcolors.length);
-var data = {
-	username: "",
-	avatar: "",
-	avatarcolor: ""
-};
 
+//Random Number
 function randomNumber(min, max){
     const r = Math.random()*(max-min) + min
     return Math.floor(r)
 }
-
-$(".left").click(function() {
-	console.log("left")
-	avatar--;
-	if (avatar< 0) {
-		avatar = avatars.length-1;
+//Arrows Logic
+function arrows(direction) {
+	if (direction === "Left" || direction === "Right") {
+		if (direction === "Left") {
+			avatar--;
+			if (avatar < 0) {avatar = avatars.length-1;}
+		} else if (direction === "Right") {
+			avatar++;
+			if (avatar>avatars.length-1) {avatar -= avatars.length;}
+		}
 		$(".avatar").attr("src", "img/avatar"+avatars[avatar]+".svg");
-	} else {
-		$(".avatar").attr("src", "img/avatar"+avatars[avatar]+".svg");
+	} else if (direction === "Up" || direction === "Down") {
+		if (direction === "Up") {
+			avatarcolor--;
+			if (avatarcolor < 0) {avatarcolor = avatarcolors.length-1;}
+		} else if (direction === "Down") {
+			avatarcolor++;
+			if (avatarcolor > avatarcolors.length-1) {avatarcolor = avatarcolor - avatarcolors.length;}
+		}
+		$(".avatar").css("background-color", avatarcolors[avatarcolor]);
+		$( ".avatar" ).css("box-shadow", " 0 0 0 5px " + avatarborders[avatarcolor]);
 	}
-});
-
-$(".right").click(function() {
-	console.log("right")
-	avatar++;
-	if (avatar>avatars.length-1) {
-		avatar -= avatars.length;
-		$(".avatar").attr("src", "img/avatar"+avatars[avatar]+".svg");
-	} else {
-		$(".avatar").attr("src", "img/avatar"+avatars[avatar]+".svg");
-	}
-});
-
-$(".up").click(function() {
-	console.log("up")
-	avatarcolor--;
-	if (avatarcolor < 0) {
-		avatarcolor = avatarcolors.length-1;
-		$(".avatar").css("background-color", avatarcolors[avatarcolor]);
-		$( ".avatar" ).css("box-shadow", " 0 0 0 5px " + avatarcolors[avatarcolor]);
-	} else if (avatarcolor === 0) {
-		$(".avatar").css("background-color", avatarcolors[avatarcolor]);
-		$( ".avatar" ).css("box-shadow", " 0 0 0 5px " + "#333");
-	} else {
-		$(".avatar").css("background-color", avatarcolors[avatarcolor]);
-		$( ".avatar" ).css("box-shadow", " 0 0 0 5px " + avatarcolors[avatarcolor]);
-	}
-});
-
-$(".down").click(function() {
-	console.log("down")
-	avatarcolor++;
-	if (avatarcolor > avatarcolors.length-1) {
-		avatarcolor = avatarcolor - avatarcolors.length;
-		$(".avatar").css("background-color", avatarcolors[avatarcolor]);
-		$( ".avatar" ).css("box-shadow", " 0 0 0 5px " + "#333");
-	} else {
-		$(".avatar").css("background-color", avatarcolors[avatarcolor]);
-		$( ".avatar" ).css("box-shadow", " 0 0 0 5px " + avatarcolors[avatarcolor]);
-	}
-});
+}
 
 $(document).ready(function() {
-	$(".logo-wrapper").click(function(){
-		$(".logo-wrapper").toggleClass("on")
+	//Random Avatar when site Open
+	$(".avatar").attr("src", "img/avatar"+avatars[avatar]+".svg");
+	$(".avatar").css("background-color", avatarcolors[avatarcolor]);
+	$(".avatar").css("box-shadow", " 0 0 0 5px " + avatarborders[avatarcolor]);
+	//Logo Animation
+	$(".logo-wrapper").click(function(){$(".logo-wrapper").toggleClass("on")});
+	//Arrows Logic
+	$(".left").click(function() {arrows("Left");});
+	$(".right").click(function() {arrows("Right");});
+	$(".up").click(function() {arrows("Up");});
+	$(".down").click(function() {arrows("Down");});
+	//Save Data in localStorage
+	$(".enter-button").click(function() {
+		var UserData = {
+			'username': $("#form-name").val(),
+			'avatar': avatars[avatar],
+			'avatarcolor': avatarcolors[avatarcolor],
+			'avatarborder': avatarborders[avatarcolor]
+		}
+		localStorage.setItem('User', JSON.stringify(UserData));
+		document.location.href = "lounge/index.html";
 	});
-	$( ".avatar" ).attr("src", "img/avatar"+avatars[avatar]+".svg");
-	$( ".avatar" ).css("background-color", avatarcolors[avatarcolor]);
-
-	if (avatarcolor === 0) {
-		$( ".avatar" ).css("box-shadow", " 0 0 0 5px " + "#333");
-	} else {
-		$( ".avatar" ).css("box-shadow", " 0 0 0 5px " + avatarcolors[avatarcolor]);
-	}
 });
 
 //var n = $("#form-name")//, o = $("#lang-select")
 
-$(".enter-button").click(function() {
-	localStorage.setItem('username', JSON.stringify($("#form-name").val()));
-	localStorage.setItem('avatar', JSON.stringify(avatars[avatar]));
-	localStorage.setItem('avatarcolor', JSON.stringify(avatarcolors[avatarcolor]));
-	document.location.href = "lounge/index.html";
-});
-
-//----
-//Saving the username from input field to the Local Storage
-//top.username=document.getElementById("name").value;
-//localStorage.setItem('user', top.username);
-
-//Getting out the username from the Local Storage
-//document.getElementById('list').innerHTML =localStorage.getItem('user');
-//----
-//localStorage.setItem('arrayOfUserNames', JSON.stringify(['foo']))
-
-//var arrayOfUserNames = JSON.parse(localStorage.getItem('arrayOfUserNames'))
-
-//arrayOfUserNames.push('bar')
-
-//localStorage.setItem('arrayOfUserNames', JSON.stringify(arrayOfUserNames))
-
-//arrayOfUserNames = JSON.parse(localStorage.getItem('arrayOfUserNames'))
-
-//console.log(arrayOfUserNames) 
 //---
 // General syntax for storing data
 //localStorage.setItem('key', 'value');
