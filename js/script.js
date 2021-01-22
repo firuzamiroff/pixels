@@ -60,7 +60,6 @@ $(document).ready(function() {
 
 //var n = $("#form-name")//, o = $("#lang-select")
 
-//---
 // General syntax for storing data
 //localStorage.setItem('key', 'value');
 // Also note that both the key & the value has to be strings. So we stringify the value(if it's an object) before setting it.
@@ -76,7 +75,3 @@ $(document).ready(function() {
 
 // To remove a value/item from localStorage
 //localStorage.removeItem("some-key");
-
-
-// see a note at the end of this answer for tips about 
-// using an angular package for a cleaner & smoother storage usage.

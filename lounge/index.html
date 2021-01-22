@@ -3,22 +3,17 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
 	<title>Lounge</title>
 </head>
-<body bgcolor="black" style="text-align: center;">
-
-	<h1 style="color: white;">Hello</h1>
-	<h1 id="lololo" style="color: white;"></h1>
-	<div>
-		<img width="80" height="80" id=avatar src="" alt="" style="">
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-4 col-sm-push-8"></div>
+		</div>
+		<div class="col-sm-8 col-sm-pull-4"></div>
 	</div>
-	<script type="text/javascript">
-		const myData = JSON.parse(localStorage.getItem('User'));
-		console.log(myData);
-
-		document.getElementById('lololo').innerHTML = myData["username"];
-		document.getElementById("avatar").src = "../img/avatar"+ myData["avatar"] +".svg";
-		document.getElementById("avatar").style = "background-color: "+ myData["avatarcolor"] +";";
-	</script>
+	<script src="jquery.min.js"></script>
+	<script src="script.js"></script>
 </body>
 </html>
