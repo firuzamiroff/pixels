@@ -1,45 +1,43 @@
 /*--------------Web site--------------*/
 body {
-	margin: 0;
 	color: #fff;
+	font-size: 14px;
+	margin: 34px 0 0 0;
 	background-color: black;
+	line-height: 1.42857143;
 	font-family: "Helvetica Neue",Helvetica,
 	"Hiragino Sans GB",STHeiti,"Microsoft Yahei",
 	"WenQuanYi Micro Hei",Arial,Verdana,sans-serif;
 }
 /*------------------------------------*/
-.container {
-	padding: 34px 15px;
+.wrapper {
+	display: flex;
 }
 
-.col-sm-push-8 {
-	
-}
-
-.col-sm-4 {
-	height: 100px;
-	float: left;
-	position: relative;
-	min-height: 1px;
-	padding-left: 15px;
-	padding-right: 15px;
-	background-color: yellow;
+.left {
+	margin: 0 15px;
 	width: 33.33333333%;
-	left: 66.66666667%;
 }
 
-.col-sm-pull-4 {
-	
-}
-
-.col-sm-8 {
-	float: left;
-	height: 100px;
-	position: relative;
-	min-height: 1px;
-	padding-left: 15px;
-	padding-right: 15px;
-	background-color: green;
+.right {
+	height: 300px;
+	margin: 0 15px;
 	width: 66.66666667%;
-	right: 33.33333333%;
+	background-color: red;
+}
+
+.avatar {
+	width: 46px;
+	height: 46px;
+	margin-right: 10px;
+}
+
+.profile {
+	margin-bottom: 15px;
+	display: inline-flex;
+}
+
+.info {
+	height: 235px;
+	background-color: white;
 }
