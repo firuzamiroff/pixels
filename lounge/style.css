@@ -1,9 +1,9 @@
 /*--------------Web site--------------*/
 body {
 	color: #fff;
-	font-size: 14px;
+	font-size: 16px;
 	margin: 34px 0 0 0;
-	background-color: black;
+	background-color: #000;
 	line-height: 1.42857143;
 	font-family: "Helvetica Neue",Helvetica,
 	"Hiragino Sans GB",STHeiti,"Microsoft Yahei",
@@ -22,14 +22,17 @@ body {
 .right {
 	height: 300px;
 	margin: 0 15px;
+	color: #0a0a0a;
+	border-radius: 4px;
 	width: 66.66666667%;
-	background-color: red;
+	background: #fdfdfd;
 }
 
 .avatar {
 	width: 46px;
 	height: 46px;
 	margin-right: 10px;
+	border-radius: 5px;
 }
 
 .profile {
@@ -38,6 +41,49 @@ body {
 }
 
 .info {
-	height: 235px;
-	background-color: white;
+	border-radius: 6px;
+	padding: 10px 15px;
+	margin-bottom: 15px;
+	background-color: #fdfdfd;
 }
+
+.name {
+
+}
+
+.link {
+	color: #fff;
+	font-size: 13px;
+	text-decoration: none;
+}
+
+.link:hover {
+	text-decoration: underline;
+}
+
+.abc {
+	width: 100%;
+	height: 34px;
+	color: #89b32b;
+	font-size: 14px;
+	padding: 6px 12px;
+	border-radius: 6px;
+	border: 1px solid #ccc;
+}
+
+.abc:focus {
+	outline: 0;
+}
+
+label {
+	color: #000;
+}
+
+.checkbox1, .checkbox2 {
+	font-size: 14px;
+}
+
+.checkbox1 {
+	padding: 10px 0 5px 0;
+}
+
