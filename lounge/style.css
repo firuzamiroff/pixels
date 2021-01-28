@@ -131,3 +131,28 @@ body {
 .rooms-placeholder {
 	margin-top: 10px;
 }
+
+.rooms {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+.rooms li {
+	float: left;
+	padding: 8px 0;
+}
+
+.room-name {
+	width: 45%;
+}
+
+.room-creator {
+	width: 35%;
+}
+
+.room-status {
+	width: 20%;
+	color: #999;
+	text-align: right;
+}
