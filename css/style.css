@@ -41,29 +41,16 @@ body {
 	transform: rotateY(0);
 }
 
-@media (max-width: 500px) {
+@media (max-width: 630px) {
 	.logo-wrapper {
 		width: 240px;
 		height: 240px;
 	}
 }
 
-@media (max-width: 500px) {
+@media (max-width: 630px) {
 	.logo-wrapper .logo {
 		width: 240px;
-	}
-}
-
-@media (max-width: 250px) {
-	.logo-wrapper {
-		width: 140px;
-		height: 140px;
-	}
-}
-
-@media (max-width: 250px) {
-	.logo-wrapper .logo {
-		width: 140px;
 	}
 }
 /*--------------UserName--------------*/
@@ -93,12 +80,6 @@ body {
 	border-radius: 20px;
 	padding: 2px 10px 3px 10px;
 }
-
-@media (max-width: 250px) {
-	.login-name input {
-		width: 100px;
-	}
-}
 /*----------------Enter---------------*/
 .login-button {
 	text-align: center;
@@ -124,15 +105,9 @@ body {
 	background: #fff;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 630px) {
 	.login-button input {
 		margin: 10px 0 20px 0;
-	}
-}
-@media (max-width: 250px) {
-	.login-button input {
-		width: 130px;
-		margin: 10px 0 10px 0;
 	}
 }
 /*--------------Settings--------------*/
@@ -153,17 +128,10 @@ body {
 	height: 80px;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 630px) {
 	.arrow, .avatar {
 		width: 60px;
 		height: 60px;
-	}
-}
-
-@media (max-width: 250px) {
-	.arrow, .avatar {
-		width: 40px;
-		height: 40px;
 	}
 }
 /*------------------------------------*/
